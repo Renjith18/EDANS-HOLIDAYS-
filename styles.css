@@ -1,85 +1,56 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #333;
-}
-header {
-  background: #000;
+/* Banner */
+.banner {
+  background: url('https://source.unsplash.com/1600x600/?idukki,nature') no-repeat center/cover;
   height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  display: flex; justify-content: center; align-items: center;
+  color: white; text-align: center; position: relative;
 }
-.navbar {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  z-index: 1000;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links li a, .btn {
-  color: white;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 4px;
-}
-.btn {
-  background-color: #00bcd4;
-}
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-.features {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.feature {
-  background: #f5f5f5;
+.banner .overlay {
+  background: rgba(0,0,0,0.5);
   padding: 20px;
-  border-radius: 8px;
-  width: 200px;
+  border-radius: 12px;
 }
-footer {
-  background-color: #111;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+.banner h1 { font-size: 48px; margin-bottom: 10px; }
+.banner p { font-size: 20px; margin-bottom: 20px; }
+
+/* Search Bar */
+.search-box {
+  display: flex; justify-content: center;
 }
-.footer-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
+.search-box input {
+  padding: 12px; width: 400px; border: none; border-radius: 25px 0 0 25px;
 }
-.footer-links li a {
-  color: white;
-  text-decoration: none;
+.search-box button {
+  padding: 12px 20px; border: none; border-radius: 0 25px 25px 0;
+  background: #ff9800; color: white; cursor: pointer;
 }
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+
+/* Sections */
+section { padding: 50px 20px; text-align: center; }
+section h2 { margin-bottom: 20px; font-size: 28px; color: #333; }
+
+/* Grid Layout */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card { border: 1px solid #ccc; border-radius: 10px; overflow: hidden; background: #fff; }
+.card-header {
+  padding: 15px; background: #f4f4f4; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
 }
-.images img {
-  width: 200px;
-  border-radius: 8px;
+.card-header h3 { margin: 0; }
+.toggle-icon { font-size: 22px; transition: transform 0.3s ease; transform: rotate(180deg); }
+.toggle-icon.active { transform: rotate(0deg); }
+
+.card-content {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
 }
+.card-content img { width: 100%; height: auto; display: block; }
+.card-content p { padding: 15px; }
+
+/* Footer */
+footer { background: #333; color: white; padding: 30px 20px; text-align: center; }
+footer .social a { color: #ff9800; margin: 0 5px; text-decoration: none; }
