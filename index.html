@@ -1,49 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perdrift - Find the Perfect Place</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDANS HOLIDAYS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header style="background-image: url('assets/images/hero.jpg'); background-size: cover;">
-    <nav class="navbar">
-      <div class="logo">Perdrift</div>
-      <ul class="nav-links">
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Activities</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a class="btn" href="#">Start a Search</a></li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <h1>Find the Perfect Place to Go</h1>
-      <p>Enter a destination, activity or travel type</p>
-      <input type="text" placeholder="Start a Search..." />
+
+  <!-- Top Banner with Search -->
+  <header class="banner">
+    <div class="overlay">
+      <h1>EDANS HOLIDAYS</h1>
+      <p>Explore the Beauty of Idukki & Beyond</p>
+      <div class="search-box">
+        <input type="text" placeholder="Search your holiday, offers, places, events...">
+        <button>Search</button>
+      </div>
     </div>
   </header>
-  <section class="gallery">
-    <h2>Popular Places</h2>
-    <div class="images">
-      <img src="assets/images/beach.jpg" alt="Beach">
-      <img src="assets/images/hiking.jpg" alt="Hiking">
-      <img src="assets/images/skiing.jpg" alt="Skiing">
-      <img src="assets/images/city.jpg" alt="City">
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      At <b>EDANS HOLIDAYS</b>, we bring you the best travel experiences across Kerala. 
+      From serene hill stations to vibrant cultural festivals, we make your journey 
+      unforgettable with tailor-made holiday packages.
+    </p>
+  </section>
+
+  <!-- Offers Section -->
+  <section class="grid-section">
+    <h2>Special Offers</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header" onclick="toggleCard('offer1','icon1')">
+          <h3>Kerala Holiday Package</h3>
+          <span id="icon1" class="toggle-icon">^</span>
+        </div>
+        <div id="offer1" class="card-content">
+          <img src="https://source.unsplash.com/600x400/?kerala,backwaters" alt="Offer">
+          <p>Enjoy 5 nights and 6 days across Munnar, Thekkady, and Alleppey at a 
+             discounted price. Includes hotel, food, and transport.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard('offer2','icon2')">
+          <h3>Monsoon Getaway</h3>
+          <span id="icon2" class="toggle-icon">^</span>
+        </div>
+        <div id="offer2" class="card-content">
+          <img src="https://source.unsplash.com/600x400/?munnar,tea" alt="Offer">
+          <p>2 nights in Munnar with tea garden walks and cultural experiences. 
+             Special monsoon discount available.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Tourist Places Section -->
+  <section class="grid-section">
+    <h2>Tourist Places</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header" onclick="toggleCard('place1','icon3')">
+          <h3>Munnar</h3>
+          <span id="icon3" class="toggle-icon">^</span>
+        </div>
+        <div id="place1" class="card-content">
+          <img src="https://source.unsplash.com/600x400/?munnar,hills" alt="Munnar">
+          <p>Munnar is a hill station known for its tea plantations, scenic views, 
+             and cool climate. A paradise for honeymooners and nature lovers.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard('place2','icon4')">
+          <h3>Idukki Dam</h3>
+          <span id="icon4" class="toggle-icon">^</span>
+        </div>
+        <div id="place2" class="card-content">
+          <img src="https://source.unsplash.com/600x400/?dam,river" alt="Idukki Dam">
+          <p>Idukki Dam is one of the highest arch dams in Asia, surrounded by 
+             lush greenery and breathtaking views.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="grid-section">
+    <h2>Festivals & Events</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header" onclick="toggleCard('event1','icon5')">
+          <h3>Onam Celebrations</h3>
+          <span id="icon5" class="toggle-icon">^</span>
+        </div>
+        <div id="event1" class="card-content">
+          <img src="https://source.unsplash.com/600x400/?festival,india" alt="Onam">
+          <p>Onam is Kerala's harvest festival with cultural programs, flower carpets, 
+             and traditional feasts.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard('event2','icon6')">
+          <h3>Boat Race</h3>
+          <span id="icon6" class="toggle-icon">^</span>
+        </div>
+        <div id="event2" class="card-content">
+          <img src="https://source.unsplash.com/600x400/?boat,kerala" alt="Boat Race">
+          <p>Kerala’s famous snake boat races are thrilling to watch during 
+             festive seasons, showcasing teamwork and tradition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <div class="footer-logo">Perdrift</div>
-      <ul class="footer-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
-      </ul>
-      <p>&copy; 2025 Perdrift. All rights reserved.</p>
+    <h2>Contact Us</h2>
+    <p>EDANS HOLIDAYS, Idukki, Kerala, India</p>
+    <p>Email: info@edansholidays.com | Phone: +91 98765 43210</p>
+    <div class="social">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
